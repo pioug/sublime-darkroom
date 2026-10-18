@@ -1,0 +1,19 @@
+* text=auto eol=lf
+*.png -text
+*.jpg -text
+
+/.gitattributes export-ignore
+/.github export-ignore
+/.gitignore export-ignore
+/.local export-ignore
+/AGENTS.md export-ignore
+/RELEASING.md export-ignore
+/assets export-ignore
+/dist export-ignore
+/examples export-ignore
+/scripts export-ignore
+*.sublime-project export-ignore
+*.sublime-workspace export-ignore
+__pycache__ export-ignore
+*.pyc export-ignore
+.DS_Store export-ignore

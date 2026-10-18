@@ -1,0 +1,9 @@
+{
+  "name": "Darkroom",
+  "dark": true,
+  "background": "#000000",
+  "foreground": "#EEEEEE",
+  "accents": ["yellow", "blue", "iris", "peach", "rose", "red", "ice", "mint"],
+  "contrast": 18.1,
+  "fallback": null
+}

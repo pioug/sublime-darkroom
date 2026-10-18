@@ -1,0 +1,39 @@
+{
+    "name": "Darkroom Widgets",
+    "variables": {
+        "foreground": "#DEDEDE",
+        "muted": "#828282",
+        "blue": "#91B9E6",
+        "red": "#F08484"
+    },
+    "globals": {
+        "background": "#000000",
+        "foreground": "var(foreground)",
+        "caret": "var(foreground)",
+        "selection": "#292929",
+        "selection_foreground": "var(foreground)",
+        "selection_border": "transparent",
+        "inactive_selection": "#1B1B1B",
+        "inactive_selection_foreground": "var(foreground)",
+        "inactive_selection_border": "transparent",
+        "rulers": "var(muted)",
+        "invisibles": "var(muted)",
+        "highlight": "var(blue)",
+        "find_highlight": "var(blue)",
+        "find_highlight_foreground": "#000000"
+    },
+    "rules": [
+        {
+            "scope": "comment",
+            "foreground": "var(muted)"
+        },
+        {
+            "scope": "keyword, storage, constant.character.escape",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "invalid",
+            "foreground": "var(red)"
+        }
+    ]
+}
