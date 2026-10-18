@@ -1,0 +1,269 @@
+{
+    "name": "Darkroom",
+    "variables": {
+        "background": "#000000",
+        "foreground": "#EEEEEE",
+        "accent": "#D0D0D0",
+        "surface": "#111111",
+        "selection": "#292929",
+        "inactive_selection": "#1B1B1B",
+        "line": "#121212",
+        "muted": "#828282",
+        "comment": "#969696",
+        "punctuation": "#AAAAAA",
+        "guide": "#292929",
+        "string": "#E4CA7E",
+        "sage": "#96CEAF",
+        "blue": "#82AEFF",
+        "mauve": "#C39CF5",
+        "amber": "#F3AE7E",
+        "coral": "#F591AE",
+        "red": "#F08484",
+        "teal": "#7ED2E5",
+        "error_background": "#2B1717",
+        "warning_background": "#282014",
+        "diff_added": "#142018",
+        "diff_deleted": "#271616",
+        "diff_changed": "#182029"
+    },
+    "globals": {
+        "background": "var(background)",
+        "foreground": "var(foreground)",
+        "accent": "var(accent)",
+        "caret": "var(foreground)",
+        "block_caret": "var(foreground)",
+        "block_caret_border": "var(foreground)",
+        "selection": "var(selection)",
+        "selection_foreground": "var(foreground)",
+        "selection_border": "var(selection)",
+        "inactive_selection": "var(inactive_selection)",
+        "inactive_selection_foreground": "var(foreground)",
+        "line_highlight": "var(line)",
+        "gutter": "var(background)",
+        "gutter_foreground": "var(muted)",
+        "line_diff_added": "var(sage)",
+        "line_diff_modified": "var(blue)",
+        "line_diff_deleted": "var(red)",
+        "guide": "var(guide)",
+        "active_guide": "var(muted)",
+        "stack_guide": "var(guide)",
+        "highlight": "var(blue)",
+        "find_highlight": "var(amber)",
+        "find_highlight_foreground": "var(background)",
+        "brackets_foreground": "var(accent)",
+        "brackets_options": "underline",
+        "bracket_contents_foreground": "var(accent)",
+        "bracket_contents_options": "underline",
+        "tags_foreground": "var(teal)",
+        "tags_options": "stippled_underline",
+        "misspelling": "var(red)",
+        "fold_marker": "var(muted)",
+        "minimap_border": "var(guide)",
+        "shadow": "#00000050",
+        "popup_css": "html { background-color: var(surface); color: var(foreground); border: 1px solid var(guide); } body { margin: 8px; } html body, html .lsp_popup { font-family: 'IBM Plex Sans', system; font-size: 12px; line-height: 1.45em; --font-size: 12px; --font-size-sm: 11px; } a { color: var(blue); } code, pre, tt, div.highlight { font-family: monospace; background-color: var(background); } p { margin-top: 0; margin-bottom: 8px; } hr, html .mdpopups hr { border-color: var(guide); } html .lsp_popup .color-muted, html .lsp_popup .signature-help-intro { color: var(muted); } html .lsp_popup .actions { background-color: var(background); }",
+        "phantom_css": "a { color: var(blue); } html #lsp-annotation { font-family: 'IBM Plex Sans', system; font-size: 11px; } html #lsp-annotation code { font-family: monospace; } html #lsp-annotation .color-muted { color: var(muted); }"
+    },
+    "rules": [
+        {
+            "name": "Comments",
+            "scope": "comment, punctuation.definition.comment",
+            "foreground": "var(comment)"
+        },
+        {
+            "name": "Strings",
+            "scope": "string",
+            "foreground": "var(string)"
+        },
+        {
+            "name": "Escapes and interpolation boundaries",
+            "scope": "constant.character.escape, punctuation.section.interpolation, punctuation.definition.template-expression",
+            "foreground": "var(teal)"
+        },
+        {
+            "name": "Interpolated expressions",
+            "scope": "meta.interpolation, meta.template.expression",
+            "foreground": "var(foreground)"
+        },
+        {
+            "name": "Numbers and constants",
+            "scope": "constant.numeric, constant.language, constant.other, support.constant",
+            "foreground": "var(amber)"
+        },
+        {
+            "name": "Keywords and declarations",
+            "scope": "keyword, storage",
+            "foreground": "var(mauve)"
+        },
+        {
+            "name": "Control flow",
+            "scope": "keyword.control - keyword.control.import - keyword.control.export - keyword.control.import-export",
+            "foreground": "var(red)"
+        },
+        {
+            "name": "Operators",
+            "scope": "keyword.operator",
+            "foreground": "var(punctuation)"
+        },
+        {
+            "name": "Word operators",
+            "scope": "keyword.operator.word, keyword.operator.logical.python",
+            "foreground": "var(mauve)"
+        },
+        {
+            "name": "Punctuation",
+            "scope": "punctuation.separator, punctuation.terminator, punctuation.accessor, punctuation.section, punctuation.definition.tag",
+            "foreground": "var(punctuation)"
+        },
+        {
+            "name": "Functions and methods",
+            "scope": "entity.name.function, variable.function, support.function, support.macro",
+            "foreground": "var(blue)"
+        },
+        {
+            "name": "Types and classes",
+            "scope": "entity.name.type, entity.name.class, entity.other.inherited-class, support.type, support.class, storage.type.primitive",
+            "foreground": "var(teal)"
+        },
+        {
+            "name": "Namespaces and modules",
+            "scope": "entity.name.namespace, entity.name.module",
+            "foreground": "var(teal)"
+        },
+        {
+            "name": "Language variables",
+            "scope": "variable.language",
+            "foreground": "var(coral)"
+        },
+        {
+            "name": "Parameters",
+            "scope": "variable.parameter",
+            "foreground": "var(foreground)"
+        },
+        {
+            "name": "Decorators and annotations",
+            "scope": "variable.annotation, entity.name.function.decorator, punctuation.definition.annotation",
+            "foreground": "var(amber)"
+        },
+        {
+            "name": "Markup tags",
+            "scope": "entity.name.tag",
+            "foreground": "var(blue)"
+        },
+        {
+            "name": "Markup attributes",
+            "scope": "entity.other.attribute-name",
+            "foreground": "var(teal)"
+        },
+        {
+            "name": "CSS selectors",
+            "scope": "entity.name.tag.css, entity.other.attribute-name.class.css, entity.other.attribute-name.id.css, entity.other.attribute-name.pseudo-class.css, entity.other.attribute-name.pseudo-element.css",
+            "foreground": "var(mauve)"
+        },
+        {
+            "name": "CSS properties",
+            "scope": "support.type.property-name, meta.property-name",
+            "foreground": "var(blue)"
+        },
+        {
+            "name": "CSS values and units",
+            "scope": "support.constant.property-value, keyword.other.unit",
+            "foreground": "var(amber)"
+        },
+        {
+            "name": "Object and mapping keys",
+            "scope": "meta.mapping.key - meta.mapping.key meta, meta.mapping.key string, string.unquoted.label, support.type.property-name.json, meta.object-literal.key",
+            "foreground": "var(blue)"
+        },
+        {
+            "name": "YAML keys",
+            "scope": "entity.name.tag.yaml",
+            "foreground": "var(blue)"
+        },
+        {
+            "name": "Regular expressions",
+            "scope": "string.regexp",
+            "foreground": "var(teal)"
+        },
+        {
+            "name": "Regular expression operators",
+            "scope": "keyword.control.anchor.regexp, keyword.operator.quantifier.regexp, punctuation.definition.character-class.regexp, punctuation.section.group.regexp",
+            "foreground": "var(mauve)"
+        },
+        {
+            "name": "Markdown headings",
+            "scope": "markup.heading, entity.name.section",
+            "foreground": "var(foreground)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Markdown emphasis",
+            "scope": "markup.italic",
+            "font_style": "italic"
+        },
+        {
+            "name": "Markdown strong emphasis",
+            "scope": "markup.bold",
+            "font_style": "bold"
+        },
+        {
+            "name": "Markdown combined emphasis",
+            "scope": "markup.bold markup.italic, markup.italic markup.bold",
+            "font_style": "bold italic"
+        },
+        {
+            "name": "Markdown links",
+            "scope": "markup.underline.link, string.other.link",
+            "foreground": "var(blue)"
+        },
+        {
+            "name": "Markdown code",
+            "scope": "markup.raw.inline, markup.raw.block",
+            "foreground": "var(teal)"
+        },
+        {
+            "name": "Markdown quotes and list markers",
+            "scope": "markup.quote, punctuation.definition.blockquote, punctuation.definition.list_item, markup.list.numbered.bullet",
+            "foreground": "var(amber)"
+        },
+        {
+            "name": "Markdown punctuation",
+            "scope": "punctuation.definition.heading, punctuation.definition.bold, punctuation.definition.italic, punctuation.definition.raw, punctuation.definition.thematic-break",
+            "foreground": "var(muted)"
+        },
+        {
+            "name": "Inserted lines",
+            "scope": "markup.inserted",
+            "foreground": "var(sage)",
+            "background": "var(diff_added)"
+        },
+        {
+            "name": "Deleted lines",
+            "scope": "markup.deleted",
+            "foreground": "var(red)",
+            "background": "var(diff_deleted)"
+        },
+        {
+            "name": "Changed lines",
+            "scope": "markup.changed",
+            "foreground": "var(blue)",
+            "background": "var(diff_changed)"
+        },
+        {
+            "name": "Diff headers",
+            "scope": "meta.diff.header, meta.diff.range",
+            "foreground": "var(mauve)"
+        },
+        {
+            "name": "Invalid syntax",
+            "scope": "invalid",
+            "foreground": "var(red)",
+            "background": "var(error_background)"
+        },
+        {
+            "name": "Deprecated syntax",
+            "scope": "invalid.deprecated",
+            "foreground": "var(amber)",
+            "background": "var(warning_background)"
+        }
+    ]
+}

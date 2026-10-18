@@ -1,0 +1,359 @@
+{
+    "extends": "Default Dark.sublime-theme",
+    "variables": {
+        "font_face": "IBM Plex Sans",
+        "darkroom_chrome": "#000000",
+        "darkroom_surface": "#111111",
+        "darkroom_border": "#161616",
+        "darkroom_hover": "#181818",
+        "darkroom_tab_hover": "#0A0A0A",
+        "darkroom_active_tab_foreground": "#F5F5F5",
+        "darkroom_selection": "#292929",
+        "darkroom_foreground": "#DEDEDE",
+        "darkroom_secondary": "#A6A6A6",
+        "darkroom_muted": "#828282",
+        "darkroom_accent": "#D0D0D0",
+        "darkroom_blue": "#91B9E6",
+        "darkroom_palette_file": "#CCD3DC",
+        "darkroom_palette_file_selected": "#E2E8EF",
+        "darkroom_palette_match_selected": "#A9CEF3",
+        "ui_bg": "var(darkroom_chrome)",
+        "text_fg": "var(darkroom_foreground)",
+        "link_fg": "var(darkroom_blue)",
+        "button_bg": "var(darkroom_hover)",
+        "button_label_shadow": "transparent",
+        "sidebar_bg": "var(darkroom_chrome)",
+        "sidebar_row_selected": "var(darkroom_selection)",
+        "sidebar_heading": "var(darkroom_muted)",
+        "sidebar_label": "var(darkroom_secondary)",
+        "sidebar_label_selected": "var(darkroom_foreground)",
+        "sidebar_label_ignored": "var(darkroom_muted)",
+        "panel_bg": "var(darkroom_chrome)",
+        "overlay_bg": "var(darkroom_surface)",
+        "dialog_bg": "var(darkroom_surface)",
+        "dialog_button_bg": "var(darkroom_hover)",
+        "switch_project_bg": "var(darkroom_surface)",
+        "progress_bar_fg": "var(darkroom_accent)",
+        "icon_button_highlight": "var(darkroom_selection)",
+        "tool_tip_bg": "var(darkroom_surface)",
+        "tool_tip_fg": "var(darkroom_foreground)",
+        "tabset_dark_bg": "var(darkroom_chrome)",
+        "tabset_medium_dark_bg": "var(darkroom_chrome)",
+        "tabset_medium_bg": "var(darkroom_chrome)",
+        "tabset_light_bg": "var(darkroom_chrome)",
+        "file_tab_selected_label_color": "var(darkroom_foreground)",
+        "file_tab_selected_light_label_color": "var(darkroom_foreground)",
+        "file_tab_unselected_label_color": "var(darkroom_secondary)",
+        "file_tab_unselected_light_label_color": "var(darkroom_secondary)",
+        "quick_panel_label_color": "var(darkroom_foreground)",
+        "quick_panel_path_label_color": "var(darkroom_muted)",
+        "quick_panel_matched_label_color": "var(darkroom_blue)",
+        "quick_panel_matched_path_label_color": "var(darkroom_blue)",
+        "quick_panel_selected_row_bg": "var(darkroom_selection)",
+        "quick_panel_selected_label_color": "var(darkroom_foreground)",
+        "quick_panel_selected_path_label_color": "var(darkroom_secondary)",
+        "quick_panel_selected_matched_label_color": "var(darkroom_palette_match_selected)",
+        "quick_panel_selected_matched_path_label_color": "var(darkroom_palette_match_selected)",
+        "status_bar_bg": "var(darkroom_chrome)",
+        "status_bar_label_color": "var(darkroom_secondary)",
+        "status_bar_label_shadow": "transparent",
+        "scroll_bar_bg": "var(darkroom_chrome)",
+        "scroll_bar_dark_bg": "var(darkroom_chrome)",
+        "scroll_bar_puck_bg": "var(darkroom_muted)",
+        "scroll_bar_puck_dark_bg": "var(darkroom_muted)",
+        "viewport_always_visible_color": "#FFFFFF0C",
+        "viewport_hide_show_color": "#FFFFFF14",
+        "kind_function_color": "var(--bluish)",
+        "kind_keyword_color": "var(--purplish)",
+        "kind_type_color": "var(--cyanish)",
+        "kind_namespace_color": "var(--cyanish)",
+        "kind_markup_color": "var(--bluish)",
+        "kind_navigation_color": "var(darkroom_accent)",
+        "kind_snippet_color": "var(--orangish)",
+        "kind_variable_color": "var(darkroom_foreground)",
+        "kind_name_label_border_color": "var(darkroom_border)"
+    },
+    "rules": [
+        {
+            "class": "title_bar",
+            "settings": ["themed_title_bar"],
+            "bg": "var(darkroom_chrome)",
+            "fg": "var(darkroom_secondary)",
+            "style": "dark"
+        },
+        {
+            "class": "sidebar_container",
+            "layer1.texture": "Theme - Darkroom/textures/border_right.png",
+            "layer1.inner_margin": [0, 0, 1, 0],
+            "layer1.draw_center": false,
+            "layer1.tint": "var(darkroom_border)",
+            "layer1.opacity": 1.0,
+            "content_margin": [0, 0, 1, 0]
+        },
+        {
+            "class": "sidebar_container",
+            "settings": ["sidebar_on_right"],
+            "layer1.texture": "Theme - Darkroom/textures/border_left.png",
+            "layer1.inner_margin": [1, 0, 0, 0],
+            "content_margin": [1, 0, 0, 0]
+        },
+        {
+            "class": "sidebar_tree",
+            "dark_content": true,
+            "row_padding": [16, 4, 8, 4],
+            "indent": 12,
+            "indent_offset": 16,
+            "indent_top_level": false
+        },
+        {
+            "class": "sidebar_heading",
+            "font.size": 11,
+            "font.bold": false,
+            "shadow_color": "transparent"
+        },
+        {
+            "class": "icon_folder",
+            "layer0.opacity": 0.0,
+            "content_margin": [0, 8]
+        },
+        {
+            "class": "icon_folder_loading",
+            "layer0.opacity": 0.0,
+            "content_margin": [0, 8]
+        },
+        {
+            "class": "icon_folder_dup",
+            "layer0.opacity": 0.0,
+            "content_margin": [0, 8]
+        },
+        {
+            "class": "icon_file_type",
+            "layer0.opacity": 0.0,
+            "content_margin": [0, 8]
+        },
+        {
+            "class": "tree_row",
+            "attributes": ["selectable", "hover", "!selected"],
+            "layer0.tint": "var(darkroom_hover)",
+            "layer0.opacity": 1.0
+        },
+        {
+            "class": "tabset_control",
+            "tab_height": 36,
+            "tab_overlap": 0,
+            "connector_height": 0,
+            "layer0.tint": "var(darkroom_chrome)"
+        },
+        {
+            "class": "tab_control",
+            "hit_test_level": 0.1,
+            "layer0.texture": "Theme - Default/common/button.png",
+            "layer0.inner_margin": 4,
+            "layer0.tint": "var(darkroom_chrome)",
+            "layer0.opacity": 1.0,
+            "layer1.texture": "Theme - Darkroom/textures/tab.png",
+            "layer1.inner_margin": 8,
+            "layer1.opacity": 1.0,
+            "layer3.opacity": 0.0
+        },
+        {
+            "class": "tab_control",
+            "attributes": ["!selected"],
+            "tint_modifier": "var(darkroom_chrome)",
+            "layer0.opacity": 1.0,
+            "layer1.opacity": 1.0
+        },
+        {
+            "class": "tab_control",
+            "attributes": ["hover", "!selected"],
+            "tint_modifier": "var(darkroom_tab_hover)",
+            "layer1.opacity": 1.0
+        },
+        {
+            "class": "tab_control",
+            "attributes": ["selected"],
+            "tint_modifier": "var(darkroom_surface)",
+            "layer0.opacity": 1.0,
+            "layer1.opacity": 1.0
+        },
+        {
+            "class": "tab_label",
+            "parents": [{"class": "tab_control", "attributes": ["!selected"]}],
+            "fg": "var(darkroom_secondary)",
+            "font.bold": false,
+            "opacity": 1.0,
+            "shadow_color": "transparent"
+        },
+        {
+            "class": "tab_label",
+            "parents": [{"class": "tab_control", "attributes": ["selected"]}],
+            "fg": "var(darkroom_active_tab_foreground)",
+            "font.bold": false,
+            "opacity": 1.0,
+            "shadow_color": "transparent"
+        },
+        {
+            "class": "tab_label",
+            "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
+            "settings": ["highlight_modified_tabs"],
+            "fg": "var(darkroom_accent)"
+        },
+        {
+            "class": "quick_panel",
+            "dark_content": true,
+            "row_padding": [10, 6, 10, 6]
+        },
+        {
+            "class": "quick_panel_label",
+            "parents": [{"class": "quick_panel_row"}],
+            "fg": "var(darkroom_palette_file)",
+            "selected_fg": "var(darkroom_palette_file_selected)"
+        },
+        {
+            "class": "quick_panel_label key_binding",
+            "fg": "var(darkroom_muted)",
+            "selected_fg": "var(darkroom_secondary)"
+        },
+        {
+            "class": "quick_panel_label hint",
+            "fg": "var(darkroom_muted)",
+            "selected_fg": "var(darkroom_secondary)"
+        },
+        {
+            "class": "popup_control",
+            "layer0.tint": "var(darkroom_surface)"
+        },
+        {
+            "class": "auto_complete",
+            "dark_content": true,
+            "row_padding": [8, 4],
+            "tint_modifier": "var(darkroom_surface)"
+        },
+        {
+            "class": "table_row",
+            "parents": [{"class": "auto_complete"}],
+            "attributes": ["selected"],
+            "layer0.tint": "var(darkroom_selection)"
+        },
+        {
+            "class": "auto_complete_label",
+            "font.face": "var(font_face)",
+            "font.size": "var(font_size)",
+            "fg": "var(darkroom_foreground)",
+            "match_fg": "var(darkroom_blue)",
+            "selected_fg": "var(darkroom_active_tab_foreground)",
+            "selected_match_fg": "var(darkroom_palette_match_selected)",
+            "fg_blend": false
+        },
+        {
+            "class": "auto_complete_label auto_complete_hint",
+            "font.size": "var(font_size_sm)",
+            "font.italic": false,
+            "fg": "var(darkroom_muted)",
+            "match_fg": "var(darkroom_muted)",
+            "selected_fg": "var(darkroom_secondary)",
+            "selected_match_fg": "var(darkroom_secondary)",
+            "opacity": 1.0
+        },
+        {
+            "class": "auto_complete_detail_pane",
+            "tint_modifier": "var(darkroom_chrome)",
+            "content_margin": [10, 7, 10, 7]
+        },
+        {
+            "class": "auto_complete_details",
+            "font.face": "var(font_face)",
+            "font.size": "var(font_size_sm)",
+            "color": "var(darkroom_secondary)",
+            "link_color": "var(darkroom_blue)",
+            "monospace_color": "var(darkroom_foreground)",
+            "monospace_background_color": "var(darkroom_surface)"
+        },
+        {
+            "class": "auto_complete_kind_name_label",
+            "font.face": "var(font_face)",
+            "font.size": "var(font_size_sm)",
+            "font.italic": false,
+            "color": "var(darkroom_secondary)"
+        },
+        {
+            "class": "kind_label",
+            "font.bold": false,
+            "font.italic": false
+        },
+        {
+            "class": "kind_label",
+            "parents": [{"class": "auto_complete"}],
+            "font.size": "var(font_size_sm)"
+        },
+        {
+            "class": "grid_layout_control",
+            "border_color": "var(darkroom_border)",
+            "border_size": 1
+        },
+        {
+            "class": "puck_control",
+            "layer0.opacity": {"target": 0.35, "speed": 5.0, "interpolation": "smoothstep"},
+            "content_margin": [0, 8]
+        },
+        {
+            "class": "puck_control",
+            "attributes": ["horizontal"],
+            "content_margin": [8, 0]
+        },
+        {
+            "class": "puck_control",
+            "parents": [{"class": "scroll_bar_control", "attributes": ["hover"]}, {"class": "scroll_track_control"}],
+            "layer0.opacity": {"target": 0.6, "speed": 5.0, "interpolation": "smoothstep"}
+        },
+        {
+            "class": "puck_control",
+            "attributes": ["pressed"],
+            "layer0.opacity": 0.8
+        },
+        {
+            "class": "text_line_control",
+            "color_scheme_tint": "var(darkroom_chrome)",
+            "font.face": "var(font_face)"
+        },
+        {
+            "class": "text_line_control",
+            "parents": [{"class": "panel_control"}],
+            "color_scheme_tint": "var(darkroom_surface)",
+            "content_margin": [4, 6, 4, 2],
+            "font.size": 10
+        },
+        {
+            "class": "label_control",
+            "parents": [{"class": "panel_control"}],
+            "font.size": 10
+        },
+        {
+            "class": "panel_grid_control",
+            "parents": [{"class": "panel_control"}],
+            "outside_hspacing": 0,
+            "outside_vspacing": 0
+        },
+        {
+            "class": "text_area_control",
+            "parents": [{"class": "panel_control"}, {"class": "text_line_control"}],
+            "settings": {"inactive_sheet_dimming": true},
+            "attributes": ["!highlighted"],
+            "background_modifier": "l(- 1%)"
+        },
+        {
+            "class": "panel_control",
+            "parents": [{"class": "edit_window"}],
+            "content_margin": [10, 4, 10, 0],
+            "layer1.texture": "Theme - Darkroom/textures/border_top.png",
+            "layer1.inner_margin": [0, 1, 0, 0],
+            "layer1.draw_center": false,
+            "layer1.tint": "var(darkroom_border)",
+            "layer1.opacity": 1.0
+        },
+        {
+            "class": "status_bar",
+            "content_margin": [10, 3, 10, 3]
+        }
+    ]
+}

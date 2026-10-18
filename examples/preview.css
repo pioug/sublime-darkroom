@@ -1,0 +1,27 @@
+/* The same palette, expressed as a small CSS component. */
+:root {
+  --background: #000000;
+  --foreground: #eeeeee;
+  --surface: #111111;
+  --accent: #d0d0d0;
+}
+
+.palette {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.palette__swatch:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .palette {
+    grid-template-columns: 1fr;
+  }
+}
