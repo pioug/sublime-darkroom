@@ -1,4 +1,4 @@
-"""Render the README montage from native screenshots and both Darkroom palettes."""
+"""Render the README montage and social preview from native screenshots."""
 
 import base64
 import json
@@ -100,3 +100,33 @@ montage += '</svg>\n'
 
 (assets / "montage.svg").write_text(montage, encoding="utf-8")
 print("Rendered assets/montage.svg")
+
+social = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title description">
+  <title id="title">Darkroom — a theme for Sublime Text 4</title>
+  <desc id="description">A pure black theme with neutral text and colorful syntax. Includes Darkroom and Darkroom P3 color schemes.</desc>
+  {font_style}
+  <rect width="1280" height="640" fill="#000000"/>
+  <g font-family="{font}">
+    <text x="56" y="160" fill="#F5F5F5" font-size="128" font-weight="500" letter-spacing="-5">Darkroom</text>
+    <text x="1216" y="116" fill="#B8B8B8" font-size="30" text-anchor="end">Sublime Text 4</text>
+  </g>
+'''
+social += screenshot_frame(
+    "preview.png", "editor", 64, 225, 1152, 351, (360, 578, 980, 260)
+)
+syntax = json.loads((project / "Darkroom P3.sublime-color-scheme").read_text())["variables"]
+for index, accent in enumerate(
+    ("string", "amber", "red", "coral", "mauve", "blue", "teal", "sage")
+):
+    color = syntax[accent]
+    channels = " ".join(
+        f"{int(color[start:start + 2], 16) / 255:.6f}"
+        for start in (1, 3, 5)
+    )
+    social += (
+        f'  <rect x="{904 + index * 40}" y="145" width="32" height="8" '
+        f'rx="2" fill="{color}" style="fill: color(display-p3 {channels})"/>\n'
+    )
+social += '</svg>\n'
+(assets / "social-preview.svg").write_text(social, encoding="utf-8")
+print("Rendered assets/social-preview.svg")
